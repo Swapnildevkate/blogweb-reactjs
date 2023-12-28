@@ -13,7 +13,7 @@ function Home({ isAuth }) {
     };
 
     getPosts();
-  });
+  },[]);
 
   const deletePost = async (id) => {
     const postDoc = doc(db,"posts",id)
