@@ -13,7 +13,7 @@ function Home({ isAuth }) {
     };
 
     getPosts();
-  },[]);
+  },);
 
   const deletePost = async (id) => {
     const postDoc = doc(db,"posts",id)
@@ -44,11 +44,15 @@ function Home({ isAuth }) {
              </div>
              <div className="postTextContainer">{post.postText}</div>
              <h3>@{post.author.name}</h3>
+            
         </div>
         );
       })}
+
+      
            
       </div>
+      
   );
 }
 
